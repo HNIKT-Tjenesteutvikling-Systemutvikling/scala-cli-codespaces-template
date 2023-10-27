@@ -8,7 +8,7 @@
       "extensions": [
         // Scala
         "scala-lang.scala@0.5.7",
-        "scalameta.metals@1.24.4",
+        "scalameta.metals@1.26.0",
         // Git
         "Exelord.git-commits"
         // Various
