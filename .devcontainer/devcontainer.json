@@ -1,6 +1,8 @@
 {
-  "name": "scala-sbt-codespaces-template",
-  "image": "sbtscala/scala-sbt:eclipse-temurin-jammy-17.0.5_8_1.9.3_3.3.0",
+  "name": "Ubuntu",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
   "customizations": {
     "vscode": {
       "extensions": [
@@ -15,5 +17,5 @@
     }
   },
   "postCreateCommand": "bash .devcontainer/post-create.sh",
-  "remoteUser": "sbtuser"
+  "remoteUser": "vscode"
 }
