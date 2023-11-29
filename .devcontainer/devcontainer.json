@@ -9,6 +9,7 @@
         "scala-lang.scala@0.5.7",
         "scalameta.metals@1.26.0",
         "Exelord.git-commits",
+        "arrterian.nix-env-selector"
       ]
     }
   },
