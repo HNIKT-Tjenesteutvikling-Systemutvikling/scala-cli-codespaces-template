@@ -18,3 +18,5 @@ target/
 !.vscode/settings.json
 
 .direnv/
+.scala-build/
+.bsp/

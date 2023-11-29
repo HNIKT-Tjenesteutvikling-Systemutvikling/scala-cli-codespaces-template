@@ -11,21 +11,14 @@
       let
         pkgs = import nixpkgs {
           inherit system;
-          overlays = [
-            (f: p: {
-              sbt = p.sbt.override { jre = p.jdk17_headless; };
-            })
-          ];
         };
-        jdk = pkgs.jdk17_headless;
+
+        jdk = pkgs.graalvm-ce;
 
         # For future selenium tests 
 
         jvmInputs = with pkgs; [
           jdk
-          coursier
-          sbt
-          scalafmt
           scala-cli
         ];
 
@@ -33,7 +26,6 @@
         jvmHook = ''
           JAVA_HOME="${jdk}"
         '';
-
 
       in
       {
