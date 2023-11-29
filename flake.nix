@@ -10,6 +10,12 @@
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = import nixpkgs {
+          overlays = [
+            (f: p: {
+              scala-cli = p.scala-cli.override { jre = p.graalvm-ce; };
+            })
+          ];
+
           inherit system;
         };
 
